@@ -1,0 +1,40 @@
+.table__wrap {
+    padding-top: 20px;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    font-size: 14px;
+    text-align: left;
+}
+
+table tr {
+    background-color: #ffffff;
+    transition: background-color 0.1s ease-out;
+}
+
+table tr:last-child {
+    border-bottom: 0;
+}
+
+table tbody th, table tbody td {
+    margin: 0;
+    padding: 0.5rem;
+    border-left: 1px solid #2b2727;
+    font-weight: normal;
+    width: 33.3%;
+}
+
+table tbody th:last-child, table tbody td:last-child {
+    border-right: 1px solid #2b2727;
+}
+
+table th {
+    border-bottom: 1px solid #2b2727;
+}
+
+.target {
+    background-color: #04AA6D;
+}
