@@ -8,9 +8,11 @@ const Table = ({ columns, data, setData }) => {
   const [draggable, setDraggable] = useState("");
   const [dragTarget, setDragTarget] = useState("");
 
+  const itemsPerPage = 20;
+
   useEffect(() => {
-    const startIndex = currentPage * 10;
-    const endIndex = startIndex + 10;
+    const startIndex = currentPage * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
 
     setRows(data.slice(startIndex, endIndex));
   }, [data, currentPage]);
@@ -73,7 +75,7 @@ const Table = ({ columns, data, setData }) => {
       <Pagination
         page={currentPage}
         count={data.length}
-        itemsPerPage={20}
+        itemsPerPage={itemsPerPage}
         onPageChange={(page) => setCurrentPage(page)}
       />
     </div>
